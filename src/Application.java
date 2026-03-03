@@ -1,6 +1,20 @@
 public class Application {
 
     static void main() {
+        Fraction firstFraction = new Fraction(1, 2);
+        System.out.println("Числитель: " + firstFraction.getNumerator());
+        System.out.println("Знаменатель: " + firstFraction.getDenominator());
+
+        Fraction secondFraction = new Fraction(3, 4);
+        secondFraction.print();
+
+        Fraction sum = firstFraction.add(secondFraction);
+        sum.print();
+
+        Fraction thirdFraction = new Fraction(16, 128);
+        thirdFraction.print();
+
+    /*
         Figure circle = new Figure("Круг", "Черный");
 
         circle.setName("Circle");
@@ -18,5 +32,6 @@ public class Application {
 
         System.out.println(cube.getName());
         System.out.println(cube.getColor());
+     */
     }
 }
