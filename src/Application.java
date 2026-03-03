@@ -1,6 +1,23 @@
 public class Application {
 
     static void main() {
+        Human tom1 = new Human("Tom");
+        System.out.println(tom1.hashCode());
+
+        Human tom2 = new Human("Tom");
+        System.out.println(tom2.hashCode());
+
+        System.out.println(tom1.equals(tom2));
+        System.out.println(tom1 == tom2);
+
+//        System.out.println(tom);
+//
+//        Student bob = new Student("Bob");
+//        bob.sayHello();
+//
+//        System.out.println(bob);
+
+    /*
         Fraction firstFraction = new Fraction(1, 2);
         System.out.println("Числитель: " + firstFraction.getNumerator());
         System.out.println("Знаменатель: " + firstFraction.getDenominator());
@@ -14,7 +31,7 @@ public class Application {
         Fraction thirdFraction = new Fraction(16, 128);
         thirdFraction.print();
 
-    /*
+
         Figure circle = new Figure("Круг", "Черный");
 
         circle.setName("Circle");
