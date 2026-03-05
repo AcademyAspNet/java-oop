@@ -1,4 +1,4 @@
-public class BookShelf extends Container {
+public class BookShelf extends Container<Book> {
 
     public BookShelf() {
         super("Книжный шкаф");

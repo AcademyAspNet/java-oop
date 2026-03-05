@@ -1,14 +1,15 @@
 public class Application {
 
     static void main() {
-        Printable crate = new Crate();
-        Container bookShelf = new BookShelf();
+        Crate<String> crateOfStrings = new Crate<>();
 
-        printInfo(crate);
-        printInfo(bookShelf);
-    }
+        crateOfStrings.addItem("Яблоко");
+        crateOfStrings.addItem("Апельсин");
+        crateOfStrings.addItem("Морковь");
 
-    static void printInfo(Printable printable) {
-        printable.print();
+        for (int i = 0; i < crateOfStrings.getItemCount(); i++) {
+            String string = crateOfStrings.getItem(i);
+            System.out.println(string);
+        }
     }
 }

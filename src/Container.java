@@ -1,11 +1,16 @@
-public abstract class Container implements Printable {
+public abstract class Container<T> implements Printable {
 
     private final String name;
     private final int capacity;
 
+    private final Object[] items;
+    private int nextIndex;
+
     protected Container(String name, int capacity) {
         this.name = name;
         this.capacity = capacity;
+        this.items = new Object[capacity];
+        this.nextIndex = 0;
     }
 
     protected Container(String name) {
@@ -28,8 +33,24 @@ public abstract class Container implements Printable {
         return capacity;
     }
 
+    public int getItemCount() {
+        return nextIndex;
+    }
+
+    public void addItem(T item) {
+        items[nextIndex] = item;
+        nextIndex++;
+    }
+
+    public T getItem(int index) {
+        return (T) items[index];
+    }
+
     @Override
     public String toString() {
-        return "Контейнер [Название = '" + name + "', Вместимость = " + capacity + "]";
+        return "Контейнер [" +
+                "Название = '" + name + "', " +
+                "Вместимость = " + capacity + ", " +
+                "Кол-во предметов = " + nextIndex + "]";
     }
 }
