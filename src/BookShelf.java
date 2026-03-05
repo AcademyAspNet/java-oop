@@ -5,7 +5,7 @@ public class BookShelf extends Container {
     }
 
     @Override
-    public void displayInfo() {
+    public void print() {
         System.out.println("Это книжный шкаф и его вместимость - " + getCapacity() + " книги.");
     }
 }

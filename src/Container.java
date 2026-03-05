@@ -1,4 +1,4 @@
-public abstract class Container {
+public abstract class Container implements Printable {
 
     private final String name;
     private final int capacity;
@@ -27,8 +27,6 @@ public abstract class Container {
     public int getCapacity() {
         return capacity;
     }
-
-    public abstract void displayInfo();
 
     @Override
     public String toString() {

@@ -1,10 +1,14 @@
 public class Application {
 
     static void main() {
-        Crate crate = new Crate();
-        crate.displayInfo();
+        Printable crate = new Crate();
+        Container bookShelf = new BookShelf();
 
-        BookShelf bookShelf = new BookShelf();
-        bookShelf.displayInfo();
+        printInfo(crate);
+        printInfo(bookShelf);
+    }
+
+    static void printInfo(Printable printable) {
+        printable.print();
     }
 }

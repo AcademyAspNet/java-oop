@@ -5,7 +5,7 @@ public class Crate extends Container {
     }
 
     @Override
-    public void displayInfo() {
+    public void print() {
         System.out.println("Это ящик и его вместимость - " + getCapacity() + " предметов.");
     }
 }
