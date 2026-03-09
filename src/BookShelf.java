@@ -8,4 +8,13 @@ public class BookShelf extends Container<Book> {
     public void print() {
         System.out.println("Это книжный шкаф и его вместимость - " + getCapacity() + " книги.");
     }
+
+    public Book getFirstBook() throws EmptyBookShelfException {
+        Book firstBook = getItem(0);
+
+        if (firstBook == null)
+            throw new EmptyBookShelfException();
+
+        return firstBook;
+    }
 }

@@ -1,15 +1,17 @@
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 public class Application {
 
-    static void main() {
-        Crate<String> crateOfStrings = new Crate<>();
+    static void main() throws Exception {
+        BookShelf bookShelf = new BookShelf();
+        readFirstBook(bookShelf);
+    }
 
-        crateOfStrings.addItem("Яблоко");
-        crateOfStrings.addItem("Апельсин");
-        crateOfStrings.addItem("Морковь");
-
-        for (int i = 0; i < crateOfStrings.getItemCount(); i++) {
-            String string = crateOfStrings.getItem(i);
-            System.out.println(string);
-        }
+    static void readFirstBook(BookShelf bookShelf) throws EmptyBookShelfException {
+        Book firstBook = bookShelf.getFirstBook();
+        System.out.println("Читаем книгу " + firstBook + "...");
     }
 }

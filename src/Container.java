@@ -1,4 +1,4 @@
-public abstract class Container<T> implements Printable {
+public abstract class Container<T extends Storeable> implements Printable {
 
     private final String name;
     private final int capacity;

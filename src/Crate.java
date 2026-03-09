@@ -1,4 +1,4 @@
-public class Crate<T> extends Container<T> {
+public class Crate<T extends Storeable> extends Container<T> {
 
     public Crate() {
         super("Ящик");

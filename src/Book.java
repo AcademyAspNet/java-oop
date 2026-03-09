@@ -1,2 +1,2 @@
-public class Book {
+public class Book implements Storeable {
 }
